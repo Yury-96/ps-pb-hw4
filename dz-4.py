@@ -4,7 +4,6 @@ import pandas, collections
 from openpyxl import load_workbook
 
 
-
 # Функция, возвращающая список ранжированных по популярности объектов (браузеров или товаров)
     # аргументы функции:
         # listing - список всех ранжируемых объектов;
@@ -55,10 +54,6 @@ nopop_item_man = item_man[-1][0] # Самый нeвостребованный т
 item_woman = collections.Counter(woman_items).most_common() # ранжированный по популярности список товаров, купленных женщинами
 pop_item_woman = item_woman[0][0] # Самый популярный товар среди женщин
 nopop_item_woman = item_woman[-1][0] # Cамый невостребованный товар среди женщин
-print('Самый популярный товар среди мужчин - ', pop_item_man)
-print('Самый популярный товар среди женщин - ', pop_item_woman)
-print('Самый нeвостребованный товар среди мужчин - ', nopop_item_man)
-print('Cамый невостребованный товар среди женщин - ', nopop_item_woman)
 
 
 # открываем файл ексель'report.xlsx' и записываем в него полученные результаты 
